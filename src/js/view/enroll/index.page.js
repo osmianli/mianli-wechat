@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { observer, inject } from "mobx-react";
-import { Button, WhiteSpace,Toast } from 'antd-mobile';
 
 /**
  *
  */
-class Index extends Component {
+class EnrollIndex extends Component {
 
   render() {
     
@@ -17,4 +16,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default EnrollIndex;
