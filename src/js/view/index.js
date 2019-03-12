@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { observer, inject } from "mobx-react";
-import { Button, WhiteSpace,Toast } from 'antd-mobile';
 
 /**
  *

@@ -16,6 +16,7 @@ import Store from "./js/store/main";
 
 // Styles
 import "./style/reset.scss";
+import "./style/main.scss";
 
 // Routes
 import Index from './js/view/index';

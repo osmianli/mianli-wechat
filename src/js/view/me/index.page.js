@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button, List,Badge } from 'antd-mobile';
+import {  List,Badge } from 'antd-mobile';
+
+import {ME_IMG} from "../../common/img";
 
 import BottomBar from '../component/bottomTab.comp';
 
@@ -21,7 +23,7 @@ class MeIndex extends Component {
                 </List>
                 <List className="m-t">
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.GROUP_COURSE_IMG}
                         extra={<Badge text={77} overflowCount={55} />}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
@@ -29,7 +31,7 @@ class MeIndex extends Component {
                         我的拼课
                     </List.Item>
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.TRANING_COURSE_IMG}
                         extra={<Badge text={77} overflowCount={55} />}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
@@ -37,14 +39,14 @@ class MeIndex extends Component {
                       我的训练营
                     </List.Item>
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.COIN_IMG}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
                     >
                       我的友班币
                     </List.Item>
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.COUPON_IMG}
                         extra={<Badge text={77} overflowCount={55} />}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
@@ -52,23 +54,17 @@ class MeIndex extends Component {
                         我的优惠券
                     </List.Item>
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.REDEEM_IMG}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
                     >
                       课程兑换码
                     </List.Item>
-                     <List.Item
-                         thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
-                         arrow="horizontal"
-                         className="p-t-sm p-b-sm"
-                     >
-                      收货地址
-                    </List.Item>
+
                 </List>
                  <List className="m-t">
                     <List.Item
-                        thumb="https://zos.alipayobjects.com/rmsportal/faMhXAxhCzLvveJ.png"
+                        thumb={ME_IMG.QUESTION_IMG}
                         arrow="horizontal"
                         className="p-t-sm p-b-sm"
                     >
