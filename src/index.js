@@ -17,9 +17,11 @@ import Store from "./js/store/main";
 // Styles
 import "./style/reset.scss";
 
+// Routes
 import Index from './js/view/index';
 
 import Me from './js/view/me/me.page';
+import MeIndex from './js/view/me/index.page';
 import Car from './js/view/me/car.page';
 import Coupon from './js/view/me/coupon.page';
 import Rating from './js/view/me/rating.page';
@@ -42,14 +44,13 @@ ReactDOM.render((
     <Provider {...Store}>
       <BrowserRouter>
       	<Index>
-          <Me>
-        	   <Route path='/me/car' component={Car}/>
-        	   <Route path='/me/coupon' component={Coupon}/>
-        	   <Route path='/me/rating' component={Rating}/>
-          </Me>
           <Enroll>
              <Route path='/enroll/list' component={EnrollList}/>
           </Enroll>
+          <Me>
+               <Route path='/me/index' component={MeIndex}/>
+          </Me>
+
         </Index>
       </BrowserRouter>
         

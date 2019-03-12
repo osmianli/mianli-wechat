@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { TabBar } from 'antd-mobile';
+import PropTypes from "prop-types";
 
 class BottomTab extends Component {
-  
-
   constructor(props) {
     super(props);
+
+    const {history, location} = this.props;
+    this.history = history || {};
+    this.location = location || {};
     this.state = {
       selectedTab: 'enroll-list',
       hidden: false,
@@ -29,8 +32,8 @@ class BottomTab extends Component {
       urlRedirect: "/course/list"
     },
     {
-      key: "me",
-      labelName: "我的",
+      key: "classmate",
+      labelName: "同学",
       iconName: "icon-gb-icon-me",
       activeIconName: "icon-gb-icon-me-active",
       urlRedirect: "/me/index"
@@ -45,8 +48,7 @@ class BottomTab extends Component {
   ];
 
   render() {
-    const { currentTab } = this.props;
-
+    const {history} = this.props;
     return (
       <div className="bottom-bar" style={{width:'100%', position:'fixed', bottom:"0"}}>
         <TabBar
@@ -72,6 +74,13 @@ class BottomTab extends Component {
     			                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
     			              />
     			            }
+                          onPress = {()=>{
+                              this.setState({
+                                selectedTab: tabBar.key,
+                              });
+                              this.history.push(tabBar.urlRedirect);
+                            }
+                          }
 			               selected={this.state.selectedTab === tabBar.key}
                     title={tabBar.labelName}>
                   	</TabBar.Item>;
@@ -82,7 +91,11 @@ class BottomTab extends Component {
       </div>
     );
   }
-
 }
+
+BottomTab.propTypes = {
+  history: PropTypes.object,
+  location: PropTypes.object
+};
 
 export default BottomTab;

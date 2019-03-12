@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {observer, inject} from "mobx-react";
 
-@inject("User") @observer
 class Me extends Component {
 
   constructor(props) {
@@ -10,7 +9,7 @@ class Me extends Component {
 
   render() {
     return (
-      <div className="page-group">
+      <div className="me-page">
         {this.props.children}
       </div>
     );
